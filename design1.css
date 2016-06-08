@@ -1,0 +1,732 @@
+/*"Universal" CSS Starts Here, Will Be Used for Repeating Aspects of Different Pages*/
+html,body {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        font-family:"Century Gothic";
+        padding:0;
+        margin:0;
+}
+
+
+/*small/medium side display - When is screen is resized */
+/* View settings on screen size width (or wider) below */
+@media (min-width: 250px) {
+    #welcome  {
+        text-align:center;
+        margin-left:auto;
+        margin-right:auto;
+        font-size: 45px;
+        font-weight: bold;
+        color:white;
+    }
+}
+
+/* View settings on screen size width (or wider) below */
+@media (min-width: 768px) {
+
+    /*allows nav box to use 100% width*/
+    nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
+        padding: 0 0px 0 0px;
+    }
+
+    nav.sidebar{
+        width: 120px;
+        height: 100%;
+        z-index: 8000;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        padding-top:70px;
+        position: fixed;
+    }
+
+
+    /* Sidebar settings */
+    nav.sidebar.navbar {
+        border-radius: 0px;
+        background-color:transparent;
+        border-color: transparent;
+    } 
+
+    /*Center Brand*/
+    nav.sidebar.navbar.sidebar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+        margin-left: 0px;
+    }
+    /*Center Brand*/
+    nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
+        text-align: center;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    /*Center Icons*/
+    nav.sidebar a{
+        padding-right: 13px;
+    }
+
+    /* Gives main container section th entire screen */
+    #mainContainer {
+      padding-top: 30px;
+      padding-left: 0px;
+    }
+
+      #welcome  {
+      text-align:center;
+      margin-left:auto;
+      margin-right:auto;
+      font-size: 80px;
+      font-weight: bold;
+      /**color:#22313F;**/
+      color:white;
+    }
+
+}
+
+/* View settings on screen size max width below */
+@media (max-width:768px){
+    .navbar-header{
+        padding-left:0px !important;
+    }
+
+    .navbar{
+        min-height:20px !important;
+        margin-bottom:0px !important;
+    }
+
+}
+
+
+/* sidebar default hover and focus setting for Non-active selections */
+nav.sidebar .navbar-nav > li > a:hover, nav.sidebar .navbar-nav > li > a:focus {
+    color:#FF4C65;
+}
+
+/* sidebar default hover and focus setting for Active selections */
+nav.sidebar .navbar-nav > li.active > a, nav.sidebar .navbar-nav > li.active > a:hover, 
+  nav.sidebar .navbar-nav > li.active > a:focus {
+    background-color:transparent;
+    border-color: transparent;
+    color:#FF4C65;
+}
+
+/* Sidebar tooltip settings  */ 
+#bs-sidebar-navbar-collapse .tooltip,
+#bs-sidebar-navbar-collapse .tooltip .tooltip-inner {
+      width:600px;
+      padding: 5px;
+      font-size: 90%;
+      word-wrap: break-word;
+}
+
+
+#currentpage {
+    background-color: #3d3d3d;
+    color: #ffffff;
+}
+
+#currentpage:hover {
+    background-color: #3d3d3d;
+    -webkit-box-shadow: 0 0 0px #000000;
+}
+
+
+/*"Universal" CSS Ends Here, Will Be Used for Repeating Aspects of Different Pages*/
+
+/*Route Planner CSS Starts Here*/
+
+#directionList {
+    list-style-type:decimal;
+    margin-left:0px;
+}
+
+#drawer {
+    height:100%;
+    background-color:#D2FFD8;
+}
+
+#mapRest {
+    height:100%;
+}
+
+#titleRoutePlanner {
+    margin-left:5%;
+    margin-top:80px;
+}
+
+/*Textbox Properties*/
+.inputs {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 0 #FFF, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    -moz-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    -ms-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    -o-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    box-shadow: 0 1px 0 #FFF, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background: #EAE7E7;
+    border: 1px solid #C8C8C8;
+    color: #777;
+    font: 15px "Century Gothic";
+    margin: 0 0 10px;
+    padding: 10px 10px 15px 15px;
+    width: 360px;
+    font-weight: bold;
+}
+
+/*Textbox Properties when Selected*/
+.inputs:focus {
+    -webkit-box-shadow: 0 0 2px #ED1C24 inset;
+    -moz-box-shadow: 0 0 2px #ed1c24 inset;
+    -ms-box-shadow: 0 0 2px #ed1c24 inset;
+    -o-box-shadow: 0 0 2px #ed1c24 inset;
+    box-shadow: 0 0 2px #ED1C24 inset;
+    background-color: #FFF;
+    border: 1px solid #ED1C24;
+    outline: none;
+}
+
+.labelInText {
+    display: block;
+    font-size:20px;
+}
+
+/*Create Route button*/
+#btn1 {
+    padding: 10px 14px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    transition: all 700ms ease;
+}
+
+#btn1:hover {
+    background-color: #d43f3a;
+}
+
+/*Export to PDF button*/
+#btn2 {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    transition: all 700ms ease;
+}
+
+#btn2:hover {
+    background-color: #d43f3a;
+}
+
+#bModalText {
+    font-size: 18px;
+}
+
+/*Properties of Directions Outputted*/
+#direction {
+    font-size:18px;
+    margin-left: 5%;
+}
+
+#infoItIn {
+    top:75px;
+}
+/*Route Planner CSS Ends Here*/
+
+
+/*Places of Interest CSS Starts Here*/
+
+#locbtn {
+    width:80%;
+    height:5%;
+    margin-left: 2%;
+    margin-top:5%;
+}
+
+#origin {
+    display:inline-block;
+}
+
+#radius {
+    display:inline-block;
+    margin-left:2%;
+}
+
+#map {
+    float:left;
+    width:80%;
+    height:100%;
+    background-color:#ffffcc;
+    margin-bottom:1%;
+}
+
+#placeList {
+    float:right;
+    width:20%;
+    height:105%;
+    background-color:#ffffcc;
+    overflow:hidden;
+    margin-bottom:1%;
+}
+
+#typedrop {
+    display:inline-block;
+    margin-left:2%;
+}
+
+#FindPlaces {
+    display:inline-block;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    transition: all 700ms ease;
+    margin-left:2%;
+}
+
+
+#FindPlaces:hover {
+    background-color: #d43f3a;
+}
+
+
+#allergenModal {
+    display:inline-block;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #28AE7B;
+    border-color: #d43f3a;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    transition: all 700ms ease;
+}
+
+#allergenModal:hover {
+    background-color: #32CC99;
+}
+
+
+/*Places of Interest CSS Ends Here*/
+
+
+
+/*About Us Page CSS Starts Here*/
+
+#AboutUsTitle{
+    position:absolute;
+    width:40%;
+    height:80%;
+    border-radius: 25px;
+    border: 5px solid #73AD21;;
+    top:12%;
+    left:55%;
+    z-index:100;
+    font-family:Trebuchet MS;
+    color:black;
+    font-size: 30px;
+    background-color:#ffffe0;
+}
+
+::-webkit-scrollbar{
+    width:4px;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius:3px;
+    background-color: #FF4C65;
+}
+
+::-webkit-scrollbar-track{
+    -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius:10px;
+}
+
+/*About Us Ends Here*/
+
+
+/*Homepage CSS starts here*/
+
+/* Gives main container section th entire screen */
+#mainContainer {
+  padding-top: 0px;
+  padding-left: 0px;
+}
+
+/* Gives main section the entire main container space */
+.main{
+  position: absolute;
+  width: 100%;
+}
+
+/* Opening screen */
+#mainsectiontop {
+    padding-top:1px;
+    height:1000px;
+    width:100%;
+    background:
+        linear-gradient(
+        rgba(0, 0, 0, 0.4), 
+        rgba(0, 0, 0, 0.4)
+        ),
+        url(Images/sea.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        filter:gray;
+}
+
+/*Div for Grid*/
+#mainsectionbottom {
+    padding-top:1px;
+    height:1000px;
+    width:100%; 
+    background:
+        linear-gradient(
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.6)
+        ),
+        url(ctePics/juniorPic.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        filter:gray;
+}
+
+/* Lets Go Button */
+#letsgo {
+    width:50%;
+    height:20%;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right:auto;
+    transition: all 0.3s ease 0s;
+}
+
+#letsgo:hover{
+    background-color: white;
+    color:black;
+}
+
+
+/*Creates 2 by 2 grid of divs*/
+.divSquare{
+    width:50%; height:50%; margin:0; border:1px solid black; float: left
+}
+
+#info {
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    z-index:1;
+    margin-top:18%;
+    margin-bottom:auto;
+    left:2%;
+    width:80%;
+    height:30%;
+    text-align: justify;
+    /**color:black;**/
+    color:white;
+    font-size:21px;
+}
+
+
+/*Route Planner square*/
+#square1 {
+    z-index:900;
+    background:
+        linear-gradient(
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.6)
+        ),
+        url(Images/route.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        -webkit-transition: background 0.5s linear;
+        -moz-transition: background 0.5s linear;
+        -ms-transition: background 0.5s linear;
+        -o-transition: background 0.5s linear;
+        transition: background 0.5s linear;
+}
+
+#square1:hover {
+    z-index:900;
+    background:
+        linear-gradient(
+        rgba(0, 0, 0, 0.1), 
+        rgba(0, 0, 0, 0.1)
+        ),
+        url(Images/route.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        filter:gray;
+    cursor:pointer;
+}
+
+/*POI square*/
+#square2 {
+    z-index:900;
+    background:
+        linear-gradient(
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.6)
+        ),
+        url(Images/hotel.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        filter:gray;
+}
+
+#square2:hover {
+    z-index:900;
+    background:
+        linear-gradient(
+        rgba(0, 0, 0, 0.1), 
+        rgba(0, 0, 0, 0.1)
+        ),
+        url(Images/route.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        filter:gray;
+    cursor:pointer;
+}
+
+/*Checklist square*/
+#square3 {
+    z-index:900;
+    background:
+        linear-gradient(
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.6)
+        ),
+        url(Images/write.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        filter:gray;
+}
+
+#square3:hover {
+    z-index:900;
+    background:
+        linear-gradient(
+        rgba(0, 0, 0, 0.1), 
+        rgba(0, 0, 0, 0.1)
+        ),
+        url(Images/route.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        filter:gray;
+    cursor:pointer;
+}
+
+/*About Us square*/
+#square4 {
+    z-index:900;
+    background:
+        linear-gradient(
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.6)
+        ),
+        url(Images/about.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        filter:gray;
+}
+
+#square4:hover {
+    z-index:900;
+    background:
+        linear-gradient(
+        rgba(0, 0, 0, 0.1), 
+        rgba(0, 0, 0, 0.1)
+        ),
+        url(Images/route.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        filter:gray;
+    cursor:pointer;
+}
+
+/*Text on grid*/
+#choicePick {
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:auto;
+    margin-bottom:auto;
+    color:white;
+    font-family:'century gothic';
+}
+
+/*Scrollbar*/
+::-webkit-scrollbar{
+    width:4px;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius:3px;
+    background-color: #0000cc;
+}
+
+::-webkit-scrollbar-track{
+    -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius:10px;
+}
+
+/*Collapsible navigation bar properties*/
+#myNavbar li a:hover, #myNavbar li:active a:active, .navbar-header a:hover{
+    color: #0000cc !important;
+}
+
+/*Homepage CSS ends here*/
+
+
+
+/*Contact Us CSS starts here*/
+.maillink {
+    color:#3281C6;
+}
+
+.maillink:hover {
+    color:#D9534F;
+    text-decoration:none;
+}
+
+
+#contactIcon1 {
+    color:black;
+    margin-left:auto;
+    margin-right:auto;
+    transition: all 700ms ease;
+}
+
+#contactIcon2 {
+    color:black;
+    text-align:center;
+    transition: all 700ms ease;
+}
+
+#contactIcon3 {
+    color:black;
+    text-align:center;
+    transition: all 700ms ease;
+}
+
+#contactIcon1:hover {
+    color:#87CEFF;
+}
+
+#contactIcon2:hover {
+    color:gray;
+}
+
+#contactIcon3:hover {
+    color:#d9534f;
+}
+
+#ic1 {
+    display:inline-block;
+    margin-left: 16%;
+}
+
+#ic2 {
+    display: inline-block;
+    margin-left: 16%;
+}
+
+#ic3 {
+    display: inline-block;
+    margin-left: 16%;
+}
+
+#contactName {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+#bModalTitle {
+    text-align:center;
+}
+/*Contact Us CSS ends here*/
+
